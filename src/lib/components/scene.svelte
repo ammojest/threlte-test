@@ -18,9 +18,10 @@
 
 <T.DirectionalLight position={[0, 10, 10]} intensity={2} />
 <T.AmbientLight intensity={1} />
+<T.PointLight position={[0, 5, 5]} intensity={1.5} />
 <!-- Left group (orbits right) -->
 <T.Group
-	position={[Math.cos(orbitRotation) * orbitRadius, -1, Math.sin(orbitRotation) * orbitRadius]}
+	position={[Math.cos(orbitRotation) * orbitRadius, -2, Math.sin(orbitRotation) * orbitRadius]}
 	scale={scale.current}
 	onpointerenter={() => scale.set(1.5)}
 	onpointerleave={() => scale.set(1)}
@@ -39,7 +40,7 @@
 <T.Group
 	position={[
 		Math.cos(orbitRotation + Math.PI) * orbitRadius,
-		-1,
+		-2,
 		Math.sin(orbitRotation + Math.PI) * orbitRadius
 	]}
 	scale={scale.current}
